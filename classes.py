@@ -1,4 +1,5 @@
 import random as r
+import main.py
 
 
 class Player:
@@ -25,6 +26,21 @@ class Player:
                 "mana potions": 0
             }
         }
+
+    def char_class(self):
+        #to select a character class we will use this method.
+        while True:
+            selection = input("""What race do you want to choose?
+            (1) Human
+            (2) Dwarf
+            (3) Elf
+            (4) Beastman""")
+            if selection in ["1","2","3","4"]:
+                create_char(selection)
+            else:
+                print("Invalid choice!")
+                
+        
 
     def level_up(self):
         required_xp = 100 * (2 ** self.level)
