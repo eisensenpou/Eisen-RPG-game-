@@ -160,7 +160,7 @@ def market(player):  # Trade
         choice = input(
             "What would you like to do?: \nBuy: \n(1) Weapons \n(2) Armors \n(3) Potions \n\n(4) Sell your items\n(0) to exit: ")
         if choice == "1":
-            index = 1  # Reset index for weapons
+            index = 1  
             print("Weapons:")
             for weapon in item_database["weapons"]:
                 print(
@@ -193,7 +193,7 @@ def market(player):  # Trade
                 print("Going back...")
 
         elif choice == "2":
-            index = 1  # Reset index for armors
+            index = 1  
             print("Armors:")
             for armor in item_database["armors"]:
                 print(
@@ -222,7 +222,7 @@ def market(player):  # Trade
                 print("Going back...")
 
         elif choice == "3":
-            index = 1  # Reset index for potions
+            index = 1  
             print("Potions:")
             for potion in item_database["potions"]:
                 print(
@@ -269,7 +269,7 @@ def create_char():
             print("Passwords don't match")
         else:
             break
-    player = Player(name, health, strength, password, mana, max_health)  # Include mana here
+    player = Player(name, health, strength, password, mana, max_health) 
     player_database[name] = player
     save_player_database()
     print(f"Success! The character {name} has been created!")
